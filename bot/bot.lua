@@ -230,7 +230,6 @@ function create_config( )
     "plugins",
     "all",
         "msg_checks"
-    "StoP",
     "text_to_image",
     "unblock",
     "Add",
