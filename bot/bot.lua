@@ -267,7 +267,7 @@ function create_config( )
     "Groups",
     "save",
     "sayleft",
-    "Filemanager"
+    "Filemanager",
     "leave_ban",
     "supergroup",
     "whitelist",
