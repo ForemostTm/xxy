@@ -229,11 +229,7 @@ function create_config( )
     "addplug",
     "plugins",
     "all",
-    "leave_ban",
-    "supergroup",
-    "whitelist",
-    "msg_checks"
-    "PtoS",
+        "msg_checks"
     "StoP",
     "text_to_image",
     "unblock",
@@ -270,6 +266,9 @@ function create_config( )
     "save",
     "sayleft",
     "Filemanager"
+    "leave_ban",
+    "supergroup",
+    "whitelist",
     },
     sudo_users = {148873502},--Sudo users
     moderation = {data = 'data/moderation.json'},
