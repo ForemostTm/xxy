@@ -212,358 +212,267 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "admin",
-    "set",
-    "get",
-    "whitelist",
-    "msg_checks",
+	"admin",
     "onservice",
-    "block",
-    "PtoS",
-    "StoP",
-    "getplug",
-    "text_to_image",
-    "unblock",
-    "Add",
     "inrealm",
-    "wiki",
+    "ingroup",
     "inpm",
     "banhammer",
-    "lock_join",
-    "antilink",
-    "anti_bot",
-    "antitag",
-    "lock_fosh",
-    "calculator",
-    "plugins",
-    "linkpv",
+    "stats",
     "anti_spam",
     "owners",
     "set",
+    "get",
     "broadcast",
     "invite",
+    "getplug",
+    "addplug",
+    "plugins",
     "all",
     "leave_ban",
-    "addsudo",
-    "hack",
-    "welcome",
-    "feedback",
-    "ve",
-    "pvhelp",
-    "antixy",
-    "tools",
-    "addplug",
-    "supergroup",
-    "semat",
-    "about",
-    "ingroup",
-    "pv",
-    "set_username",
-    "typegp",
-    "id-by-reply",
-    "telegram",
-    "salam",
-    "Groups",
-    "save",
-    "sayleft",
-    "dlplug",
-    "Filemanager"
+	"supergroup",
+	"whitelist",
+	"msg_checks"
     },
-    sudo_users = {111984481,67647823,204876190},--Sudo users
+    sudo_users = {111984481},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
-
 https://github.com/SEEDTEAM/TeleSeed
-
 Admins
 @iwals [Founder]
 @imandaneshi [Developer]
 @POTUS [Developer]
 @seyedan25 [Manager]
 @aRandomStranger [Admin]
-
 Special thanks to
 awkward_potato
 Siyanew
 topkecleon
 Vamptacus
-
 Our channels
 @teleseedch [English]
 @iranseed [persian]
-
 Our website 
 http://teleseed.seedteam.org/
 ]],
     help_text_realm = [[
 Realm Commands:
-
 !creategroup [Name]
 Create a group
-
 !createrealm [Name]
 Create a realm
-
 !setname [Name]
 Set realm name
-
 !setabout [group|sgroup] [GroupID] [Text]
 Set a group's about text
-
 !setrules [GroupID] [Text]
 Set a group's rules
-
 !lock [GroupID] [setting]
 Lock a group's setting
-
 !unlock [GroupID] [setting]
 Unock a group's setting
-
 !settings [group|sgroup] [GroupID]
 Set settings for GroupID
-
 !wholist
 Get a list of members in group/realm
-
 !who
 Get a file of members in group/realm
-
 !type
 Get group type
-
 !kill chat [GroupID]
 Kick all memebers and delete group
-
 !kill realm [RealmID]
 Kick all members and delete realm
-
 !addadmin [id|username]
 Promote an admin by id OR username *Sudo only
-
 !removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
-
 !list groups
 Get a list of all groups
-
 !list realms
 Get a list of all realms
-
 !support
 Promote user to support
-
 !-support
 Demote user from support
-
 !log
 Get a logfile of current group or realm
-
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
 Only sudo users can run this command
-
 !bc [group_id] [text]
 !bc 123456789 Hello !
 This command will send text to [group_id]
-
-
 **You can use "#", "!", or "/" to begin all commands
-
-
 *Only admins and sudo can add bots in group
-
-
 *Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
 *Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
-🚷 بن [آیدی.ڪد.ریپلای]
+بن [آیدی.ڪد.ریپلای]
 تحریم ڪردن شخص از گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🚫 اخراج [آیدی.ریپلای]
+اخراج [آیدی.ریپلای]
 حذف ڪردن شخص موردنظر
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-💳 اطلاعات
+اطلاعات
 نشان دادن اطلاعات شخص موردنظر
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-📋 لیست بن
+لیست بن
 لیست افراد تحریم شده
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🔨 حذف بن [آیدی.ڪد]
+حذف بن [آیدی.ڪد]
 شڪستن تحریم شخص موردنظر
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🛂 قوانین / توضیحات
+قوانین / توضیحات
 مشاهده قوانین یا توضیحات گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🌅 تنظیم [عکس/نام]
+تنظیم [عکس/نام]
 تغییر عڪس و نام گروه
 *تنظیم عڪس باعث قفل شدن عڪس گروه میشود
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-📤 ترفیع [آیدی.ڪد.ریپلای]
+ ترفیع [آیدی.ڪد.ریپلای]
 اضافه ڪردن مدیر به گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🏳 پاک کردن [قوانین/لیست مدیران/توضیحات]
+پاک کردن [قوانین/لیست مدیران/توضیحات]
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-📥 تنزل [آیدی.ڪد.ریپلای]
+تنزل [آیدی.ڪد.ریپلای]
 حذف یڪ مدیـــــر
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-📮 تنظیم [قوانین/توضیحات] (متن)
+ تنظیم [قوانین/توضیحات] (متن)
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🔒 قفل [همه/استیکر/اسم/ورود/اسپم/فارسی/تبلیغ/انگلیسی/فحش/تگ/خروج/ربات]
+ قفل [همه/استیکر/اسم/ورود/اسپم/فارسی/تبلیغ/انگلیسی/فحش/تگ/خروج/ربات]
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🔓 باز کردن [همه/استیکر/اسم/ورود/عکس/اسپم/فارسی/تبلیغ/انگلیسی/فحش/تگ/خروج/ربات]
+ باز کردن [همه/استیکر/اسم/ورود/عکس/اسپم/فارسی/تبلیغ/انگلیسی/فحش/تگ/خروج/ربات]
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-☠ حساسیت [5-20]
+ حساسیت [5-20]
 تنظیم محدودیت اسپم
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-⚙ تنظیمات
+ تنظیمات
 مشاهده تنظیمات گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-👥 لیست مدیران
+ لیست مدیران
 لیست مدیران گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-⛓ لینک
+لینک
 ارسال لینک در گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🔵 لینک جدید
+لینک جدید
 ساخت لینک جدید برای گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-💬 لینک خصوصی
+ لینک خصوصی
 ارسال لینک در پیوی
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🎰 ماشین حساب (عدد+*/-عدد)
+ ماشین حساب (عدد+*/-عدد)
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-☝️ اخراج غیرفعال
+ اخراج غیرفعال
 اخراج کردن غیر فعال ها
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-💡 ایدی :
+ ایدی :
 فقط با ریپلی میتوانید از این دستور استفاده کنید
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🚪خروج
+خروج
 ترڪ ڪردن گروه
 ∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─∙─
-🤖 !antibot روشن/خاموش
-antibot = قفل ربات
-●•••••••••••••••••••••••••●
-❗️Note that: از ! و / استفاده نکنید
-شما میتوانید با دستور مدیرو بیار، ادمین ربات رو اد کنید
-اخطار: بدون دلیل از این دستور استفاده نکنید
-●•••••••••••••••••••••••••●
-Developers: 
-@janlou
-@amiraliiiiiiiii81
-@bestroid_admin
 ]],
 	help_text_super =[[
+SuperGroup Commands:
 !info
-📚 نمایش اطلاعات کلی درباره سوپرگپ
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Displays general info about the SuperGroup
 !admins
-👥 مشاهده ادمین های گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns SuperGroup admins list
 !owner
-👤 مشاهده صاحب گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns group owner
 !modlist
-📋 مشاهده لیست مدیران
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns Moderators list
 !bots
-🤖 نمایش لیستی از ربات های موجود در گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Lists bots in SuperGroup
 !who
-📜 لیست تمام کاربران گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Lists all users in SuperGroup
 !block
-🚷 اخراج یک نفر از گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Kicks a user from SuperGroup
+*Adds user to blocked list*
 !ban
-🚫 تحریم یک فرد از گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Bans user from the SuperGroup
 !unban
-❌ حذف تحریم فرد
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Unbans user from the SuperGroup
 !id
-☑️ مشاهده آیدی شما یا گروه
-*برای مشاهده آیدی یک نفر !id را ریپلای کنید یا در مقابل آن ایدی @ قرار دهید*
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Return SuperGroup ID or user id
+*For userID's: !id @username or reply !id*
 !id from
-👁 مشاهده آیدی فردی که پیام فوروارد شده به نام آن است
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Get ID of user message is forwarded from
 !kickme
-🚪 خروج از گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Kicks user from SuperGroup
+*Must be unblocked by owner or use join by pm to return*
 !setowner
-👤 تعیین سازنده گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!promote [یوزرنیم/آیدی عددی]
-🔺 ارتقا درجه به مدیر
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!demote [یوزرنیم/آیدی عددی]
-🔻تنزل درجه به کاربر عادی
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!setname [نام]
-📇 تنظیم نام گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Sets the SuperGroup owner
+!promote [username|id]
+Promote a SuperGroup moderator
+!demote [username|id]
+Demote a SuperGroup moderator
+!setname
+Sets the chat name
 !setphoto
-🗻 تنظیم عکس گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Sets the chat photo
 !setrules
-🛃 تنظیم قوانین گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Sets the chat rules
 !setabout
-📖 تنظیم متن درباره گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Sets the about section in chat info(members list)
+!save [value] <text>
+Sets extra info for chat
+!get [value]
+Retrieves extra info for chat by value
 !newlink
-🔧لینک جدید
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Generates a new group link
 !link
-📎 دریافت لینک گروه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Retireives the group link
 !rules
-🛂 مشاهده قوانین
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!lock [links|flood|spam|member|sticker|contacts]
-🔒قفل لینک و اسپم و اعضا و استیکر و مخاطب
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!unlock [links|flood|spam|Arabic|member|sticker|contacts]
-🔓بازکردن قفل
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!mute [all|audio|gifs|photo|video]
-🤐 میوت کردن همه و صدا و گیف و عکس و فیلم
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Retrieves the chat rules
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Lock group settings
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: enable strict settings enforcement (violating user will be kicked)*
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Unlock group settings
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: disable strict settings enforcement (violating user will not be kicked)*
+!mute [all|audio|gifs|photo|video|service]
+mute group message types
+*A "muted" message type is auto-deleted if posted
 !unmute [all|audio|gifs|photo|video|service]
-😤 آنمیوت کردن
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!setflood [عدد بین 5 تا 20]
-💠 تنظیم حساسیت اسپم
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Unmute group message types
+*A "unmuted" message type is not auto-deleted if posted
+!setflood [value]
+Set [value] as flood sensitivity
 !settings
-⚙ مشاهده تنظیمات کلی
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns chat settings
 !muteslist
-📝 لیست میوت شده ها
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!muteuser [یوزرنیم]
-🤐 میوت کردن یک شخص که باعث میشه نتونه حرف بزنه
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns mutes for chat
+!muteuser [username]
+Mute a user in chat
+*If a muted user posts a message, the message is deleted automaically
+*only owners can mute | mods and owners can unmute
 !mutelist
-😭 لیست اشخاص میوت شده
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns list of muted users in chat
 !banlist
-📒 مشاهده لیست تحریم شدگان
-∙─∙─∙─∙─∙─∙─∙─∙─∙
+Returns SuperGroup ban list
 !clean [rules|about|modlist|mutelist]
-⚠️ پاک کردن
-∙─∙─∙─∙─∙─∙─∙─∙─∙
 !del
-❌ حذف یک پیام با ریپلای
-∙─∙─∙─∙─∙─∙─∙─∙─∙
-!res [یوزرنیم]
-👤 مشخصات یک فرد
-●•••••••••••••••••••
+Deletes a message by reply
+!public [yes|no]
+Set chat visibility in pm !chats or !chatlist commands
+!res [username]
+Returns users name and id by username
+!log
+Returns group logs
+*Search for kick reasons using [#RTL|#spam|#lockmember]
+**You can use "#", "!", or "/" to begin all commands
+*Only owner can add members to SuperGroup
+(use invite link to invite)
+*Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
+*Only owner can use res, setowner, promote, demote, and log commands
 ]],
   }
   serialize_to_file(config, './data/config.lua')
