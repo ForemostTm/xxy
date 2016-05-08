@@ -21,7 +21,7 @@ function run(msg, matches)
 	return
   end
   if not is_admin1(msg) then -- For admins only !
-		return 'Only admins can invite.'
+		return 'فقط برای مدیران!'
   end
   if not is_realm(msg) then
     if data[tostring(msg.to.id)]['settings']['lock_member'] == 'yes' and not is_admin1(msg) then
@@ -43,3 +43,5 @@ return {
 }
 
 end
+-- persian lang by: @janlou
+-- +supergp

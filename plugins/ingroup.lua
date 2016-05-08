@@ -784,12 +784,13 @@ local function promote_demote_res(extra, success, result)
       local chat_id = extra.chat_id
       local mod_cmd = extra.mod_cmd
       local receiver = "chat#id"..chat_id
-      if mod_cmd == 'promote' then
+      if mod_cmd == 'ترفیع' then
         return promote(receiver, member_username, member_id)
-      elseif mod_cmd == 'demote' then
+      elseif mod_cmd == 'تنزل' then
         return demote(receiver, member_username, member_id)
       end
 end
+
 local function mute_user_callback(extra, success, result)
 	if result.service then
 		local action = result.action.type
@@ -1192,7 +1193,7 @@ if msg.to.type == 'chat' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] demoted @".. member)
 	local cbres_extra = {
 	chat_id = msg.to.id,
-        mod_cmd = 'demote',
+        mod_cmd = 'تنزل',
 	from_id = msg.from.id
 	}
 	local username = matches[2]
@@ -1765,3 +1766,5 @@ return {
   pre_process = pre_process
 }
 end
+--Persian lang by: @janlou
+--CopyRight all right reserved

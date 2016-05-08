@@ -321,7 +321,6 @@ return {
 	"^[#!/](mycontact)$",
 	"^[#/!](reload)$",
 	"^[#/!](updateid)$",
-	"^[#/!](sync_gbans)$",
 	"^[#/!](addlog)$",
 	"^[#/!](remlog)$",
 	"%[(photo)%]",

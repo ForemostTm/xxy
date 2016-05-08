@@ -347,3 +347,6 @@ return {
   run = run,
   pre_process = pre_process
 }
+
+--persian lang by: @janlou
+-- +supergp
