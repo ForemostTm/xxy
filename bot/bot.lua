@@ -229,7 +229,10 @@ function create_config( )
     "addplug",
     "plugins",
     "all",
-        "msg_checks"
+    "msg_checks",
+    "block",
+    "PtoS",
+    "StoP",
     "text_to_image",
     "unblock",
     "Add",
