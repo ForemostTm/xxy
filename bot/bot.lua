@@ -230,10 +230,9 @@ function create_config( )
     "plugins",
     "all",
     "leave_ban",
-	"supergroup",
-	"whitelist",
-	"msg_checks"
-    "block",
+    "supergroup",
+    "whitelist",
+    "msg_checks"
     "PtoS",
     "StoP",
     "text_to_image",
